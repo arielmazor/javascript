@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <style>
+        .container{
+            height: 100%;
+            flex: 1;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             flex-direction: column;
+        }
+        .wrapper{
+            height: 200px;
+            width: 400px;
+            border: black solid 1px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .x{
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .y{
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .check{
+            height:25px;
+            width: 100px;
+            border-radius: 25px;
+            border: 1px solid black;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title{
+            font-family: 'Roboto', sans-serif;
+            font-size: 40px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+<body>
+   <div class="container">
+       <div class="title"> Friends numbers</div>
+       <div class="wrapper">
+           <div class="x">
+           <input type="text" class="input1"></div>
+           <div class="y">
+           <input type="text" class="input2"></div>
+           <div onclick="getDevivde()" class="check"> lets check</div>
+       </div>
+   </div >
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="friendsNum.js"></script>
+
+<head>
+
+</html>
