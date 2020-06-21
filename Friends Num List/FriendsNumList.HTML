@@ -112,6 +112,43 @@
             height: 35;
             padding: 0 15;
         }
+
+        .list-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top:30px;
+            flex-direction: column;
+        }
+
+        .row {
+            border: 1px solid lightgray;
+            height: 60PX;
+            width: 130px;
+            display: flex;
+            border-radius: 1px;
+        }
+
+        .num1 {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            border-right: 1px solid lightgray;
+            width: 65px;
+            padding: 0 5;
+        }
+
+        .num2 {
+            padding: 5;
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 60px;
+            width: 65px;
+        }
     </style>
 
 <body>
@@ -130,11 +167,24 @@
         </div>
         <div class="find">
             <div class="wrapper"></div>
-                <input type="number" class="Num-input">
-                <img onclick="shearchFriendsNumbers()" src="find.png" class="find-icon" alt="">
-            </div>
+            <input value="2222" type="number" class="Num-input">
+            <img onclick="shearchFriendsNumbers()" src="find.png" class="find-icon" alt="">
         </div>
+        <div class="list-wrapper"></div>
+
+
+        <script type="text/html" id="friendsNumberList">
+                <% _.forEach(results, function(item) { %>
+                    <div class = "row">
+                        <div class ="num1"><%- item.num1 %></div>
+                        <div class="num2"><%- item.num2 %></div>
+                    </div>
+                <% }); %> 
+        </script>
+
+    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="FriendNumList.js"></script>
 
