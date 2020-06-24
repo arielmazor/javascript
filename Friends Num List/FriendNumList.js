@@ -9,9 +9,11 @@ function shearchFriendsNumbers() {
   var num1 = parseInt($(".Num-input").val());
   var num2 = parseInt($(".Num-input").val());
   setDividersSumArr(num1, num2);
+
   let fnTamplate = _.template($("#friendsNumberList").html());
   $(".list-wrapper").html(fnTamplate(results));
 }
+
 /* -----------------------------------------------
        updateresult
 ----------------------------------------------- */
