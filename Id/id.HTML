@@ -4,6 +4,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Oxygen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&family=Raleway:ital@1&display=swap"
+        rel="stylesheet">
     <style>
         /* -----------------------------------------------
         modal        
@@ -30,10 +32,10 @@
         .more-info .img {
             position: absolute;
             flex: 1;
-            height: 20px;
-            width: 27px;
-            left: 1207px;
-            bottom: 399px;
+            height: 16px;
+            width: 25px;
+            left: 1214px;
+            bottom: 382px
         }
 
         .content {
@@ -64,7 +66,8 @@
 
         .name {
             font-size: 30px;
-            font-family: 'Oxygen', sans-serif;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-family: 'Raleway', sans-serif;
 
         }
 
@@ -73,15 +76,14 @@
         }
 
         .gender {
-            left: 764px;
+            left: 790px;
             position: absolute;
-            height: 23p;
-            width: 114px;
+            bottom: 377px;
         }
 
         .adress {
-            font-family: 'Lato', sans-serif;
-            font-family: 'Oxygen', sans-serif;
+            font-family: 'Noto Sans JP', sans-serif;
+            font-family: 'Raleway', sans-serif;
             font-size: 30px;
             font-style: unset;
         }
@@ -147,15 +149,21 @@
             bottom: 0;
             opacity: 90px;
         }
+
+        .remove-modal {
+            position: absolute;
+            left: 1219px;
+            height: 20px;
+            bottom: 551px;
+        }
     </style>
 
 <body>
-    <div onclick="closeModal()" class="modal">
+    <div class="modal">
+
         <div class="content">
+            <img onclick="closeModal()" class="remove-modal" src="x.png" alt="">
             <div class="info-wrapper"></div>
-            <div class="more-info">
-                <img class=img src="sada.png" alt="">
-            </div>
         </div>
     </div>
     <div class="container">
@@ -173,8 +181,12 @@
             </div>
             <div class="adress-name-gender">
                 <div class="name"><%= fullName %></div>
-                <img class="gender" src="<%= gender %>" alt="">
-                <div class="adress"><%= adrres %></div>
+                <div class="name"><%= adrres %></div>
+               <% if(gender === 'male') { %>
+                <img class="gender" src="men-gender-icon.png" alt="">
+                <% } else { %>
+                    <img class="gender" src="women.png" alt="">
+                <% } %>
             </div>
         </div>
 </script>
