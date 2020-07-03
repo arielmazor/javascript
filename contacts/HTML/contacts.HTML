@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style/main.css">
+    <link rel="stylesheet" href="../style/modal.css">
+</head>
+<body>
+    <div class="modal">
+
+        <div class="content">
+            <div class="header">
+                <div class="title">
+                    <div class="title-contant">Edit contant</div>
+                </div>
+                <div class="actions  f-c">
+                    <div clas="btn">
+                        <i class="fa fa-times lg" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="body">
+
+            </div>
+        </div>
+    </div>
+    <div class="C">
+        <div class="contacts-wrapper">
+            <!-- <div class="title">
+                <div class="name">name</div>
+                <div class="phone-number">972526543631</div>
+            </div> -->
+            <div class="row-wrapper"></div>
+        </div>
+
+        <script type="text/html" id="contant-script">
+                    <% _.forEach(obj, function(item, index) { %>
+                    <div class = "row">
+                        
+                        <div class="image-wrapper">
+                            <img onclick="showModal('<%= index %>')" class="image"  src="<%= obj[index].src %>">
+                        </div>
+                        <div class="name-wrapper">
+                            <div class="name"><%= obj[index].fullName %></div>
+                        </div>
+                        <div class="phoneNumber-wrapper">
+                            <div class="phoneNumber"><%= obj[index].phoneNumber %></div>
+                        </div>
+                        <div class="actions">
+                            <img  class="delete"  src="<%= obj[index].delete %>">
+                            <img  onclick="showModal('<%= index %>')"class="edit"  src="<%= obj[index].edit %>">
+                        </div>
+                    </div>
+                    <% }); %>
+                </script>
+        <script type="text/html" id="contant">
+
+                            <div class="img-container">
+                                <img class="img" src="<%= src %>" alt="">
+                            </div>
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                                     <div class="adress-name-gender">
+                                         <div class="firsName-input-wrapper">
+                                    <input value="<%= fullName %>" class="firsName-input"  type="text"></div>
+                                    </div> 
+                    
+    </script>
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../JavaScript/contacts.js"></script>
+    </body>
+</html>
