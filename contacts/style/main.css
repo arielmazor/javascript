@@ -45,7 +45,7 @@ row
 }
 
 .row:hover>.actions, .actions:hover {
-    display: inline-block;
+    display:flex;
 }
 
 .phone-number {
@@ -79,11 +79,9 @@ row
 
 .actions {
     display: none;
-    height: 100px;
     width: 100px;
     position: absolute;
     left: 962px;
-    top: 43%;
 }
 
 .delete {
@@ -98,5 +96,25 @@ row
 
 .edit {
     height: 19px;
-    padding-left: 20px;
 }
+.actions-wrapper{
+    display: none;
+}
+.btn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+}
+.btn-icon:hover{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    border-radius: 100%;
+    background: rgb(187, 187, 187);
+    cursor: pointer;
+} 
