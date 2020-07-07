@@ -19,34 +19,42 @@
             <div class="body">
 
             </div>
+
             <div onclick="closeModal()" class="btn btn-link">cansel</div>
-            <div class="btn btn-primary">save</div>
+            <div onclick="onSave()" class="btn btn-primary">save</div>
         </div>
     </div>
     <div class="C">
+        <div class="title">
+            <div class="new-wrapper">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </div>
+        </div>
         <div class="contacts-wrapper">
             <div class="row-wrapper"></div>
+
         </div>
 
+
         <script type="text/html" id="contant-script">
-            <% _.forEach(obj, function(item, index) { %>  
+            <% _.forEach(userlist, function(item, index) { %>  
         <div class="row">
 
             <div class="image-wrapper">
-                <img onclick="showModal('<%= index %>')" class="image" src="<%= obj[index].src %>">
+                <img onclick="showModal('<%= index %>')" class="image" src="<%= userlist[index].src %>">
             </div>
             <div class="name-wrapper">
-                <div class="name"><%= obj[index].fullName %></div>
+                <div class="name"><%= userlist[index].fullName %></div>
             </div>
             <div class="phoneNumber-wrapper">
-                <div class="phoneNumber"><%= obj[index].phoneNumber %></div>
+                <div  class="phoneNumber"><%= userlist[index].phoneNumber %></div>
             </div>
             <div class="actions">
                 <div class="btn-icon">
-                    <img class="delete" src="<%= obj[index].delete %>">
+                    <img onclick="_remove()" class="delete" src="<%= userlist[index].delete %>">
                 </div>
                 <div class="btn-icon">
-                    <img onclick="showModal('<%= index %>')" class="edit" src="<%= obj[index].edit %>">
+                    <img onclick="showModal('<%= index %>')" class="edit" src="<%= userlist[index].edit %>">
                 </div>
             </div>
         </div>
@@ -60,17 +68,17 @@
 
         <div class="input-wrapper">
             <div class="name-title">Name:</div>
-            <input value="<%= fullName %>" class="firsName-input" type="text">
+            <input id="name" value="<%= fullName %>" class="firsName-input" type="text">
         </div>
 
         <div class="input-wrapper">
             <div class="name-title">Phone:</div>
-            <input value="<%= phoneNumber %>" class="firsName-input" type="text">
+            <input id="Phonenumber" value="<%= phoneNumber %>" class="firsName-input" type="text">
         </div>
 
         <div class="input-wrapper">
             <div class="name-title">Address:</div>
-            <input value="<%= address %>" class="firsName-input" type="text">
+            <input id="address" value="<%= address %>" class="firsName-input" type="text">
         </div>
 
     </div>

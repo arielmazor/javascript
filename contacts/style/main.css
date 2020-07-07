@@ -118,3 +118,11 @@ row
     background: rgb(187, 187, 187);
     cursor: pointer;
 } 
+.new-wrapper{
+    position: absolute;
+    right: 416px;
+    top: 210px;
+}
+.fa-plus{
+    font-size: 26px;
+}
